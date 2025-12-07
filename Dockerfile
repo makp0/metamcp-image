@@ -1,4 +1,4 @@
-FROM metamcp:latest
+FROM ghcr.io/metatool-ai/metamcp:latest
 
 # Install Python dependencies
 RUN pip install --no-cache-dir \
@@ -20,9 +20,6 @@ RUN curl -fsSL https://bun.sh/install | bash \
 # Install Playwright and browsers (Node-based)
 RUN npm install -g playwright \
     && npx playwright install --with-deps
-
-# Example: install a global MCP package (placeholder, replace with real MCP server package)
-RUN npm install -g some-mcp-package
 
 WORKDIR /app
 
