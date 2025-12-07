@@ -1,7 +1,7 @@
 FROM ghcr.io/metatool-ai/metamcp:latest
 
 # Install Python dependencies
-RUN uv install --no-cache-dir \
+RUN uv pip install --no-cache-dir \
     requests \
     beautifulsoup4
 
